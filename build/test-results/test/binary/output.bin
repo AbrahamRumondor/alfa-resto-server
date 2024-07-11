@@ -1,16 +1,0 @@
-‡2024-07-11 11:37:39.300 [Test worker @coroutine#1] TRACE i.ktor.client.plugins.HttpPlainText - Adding Accept-Charset=UTF-8 to http:///
-¤2024-07-11 11:37:39.349 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
-}2024-07-11 11:37:39.564 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - Application started in 0.223 seconds.
-œ2024-07-11 11:37:39.565 [DefaultDispatcher-worker-1 @call-context#2] INFO  ktor.test - Application started: io.ktor.server.application.Application@5bdd1b71
-v2024-07-11 11:37:39.568 [DefaultDispatcher-worker-3 @coroutine#4] INFO  ktor.test - Responding at http://localhost:80
-x2024-07-11 11:37:39.568 [DefaultDispatcher-worker-3 @coroutine#4] INFO  ktor.test - Responding at https://localhost:443
-m2024-07-11 11:37:39.588 [DefaultDispatcher-worker-1 @request#2] TRACE io.ktor.routing.Routing - Trace for []
-/, segment:0 -> SUCCESS @ /
->  /send, segment:0 -> FAILURE "Selector didn't match" @ /send
-N  /send-android, segment:0 -> FAILURE "Selector didn't match" @ /send-android
->  /chat, segment:0 -> FAILURE "Selector didn't match" @ /chat
-Matched routes:
-  No results
-Route resolve result:
-*  FAILURE "No matched subtrees found" @ /
- 2024-07-11 11:37:39.597 [DefaultDispatcher-worker-1 @request#2] TRACE i.k.s.p.c.ContentNegotiation - Skipping response body transformation from HttpStatusCode to OutgoingContent for the GET / request because the HttpStatusCode type is ignored. See [ContentNegotiationConfig::ignoreType].
