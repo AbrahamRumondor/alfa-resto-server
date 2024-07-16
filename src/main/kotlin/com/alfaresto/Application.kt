@@ -19,6 +19,7 @@ fun Application.module() {
     configureMonitoring()
     configureRouting()
 
+
     val base64EncodedKey = System.getenv("encoded_service_account_key")
     val serviceAccountBytes = Base64.getDecoder().decode(base64EncodedKey)
     val serviceAccountStream = serviceAccountBytes.inputStream()
