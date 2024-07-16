@@ -7,6 +7,7 @@ import com.google.firebase.FirebaseOptions
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.*
 import io.ktor.server.plugins.contentnegotiation.ContentNegotiation
+import java.util.Base64
 
 
 fun main(args: Array<String>) {
@@ -18,7 +19,11 @@ fun Application.module() {
     configureMonitoring()
     configureRouting()
 
-    val serviceAccountStream = this::class.java.classLoader.getResourceAsStream("service_account_key.json")
+    val base64EncodedKey = System.getenv("encoded_service_account_key")
+    val serviceAccountBytes = Base64.getDecoder().decode(base64EncodedKey)
+    val serviceAccountStream = serviceAccountBytes.inputStream()
+
+//    val serviceAccountStream = this::class.java.classLoader.getResourceAsStream("service_account_key.json")
     val options = FirebaseOptions.builder()
         .setCredentials(GoogleCredentials.fromStream(serviceAccountStream))
         .build()
