@@ -24,6 +24,7 @@ fun Application.module() {
     val serviceAccountBytes = Base64.getDecoder().decode(base64EncodedKey)
     val serviceAccountStream = serviceAccountBytes.inputStream()
 
+
 //    val serviceAccountStream = this::class.java.classLoader.getResourceAsStream("service_account_key.json")
     val options = FirebaseOptions.builder()
         .setCredentials(GoogleCredentials.fromStream(serviceAccountStream))
